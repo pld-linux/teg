@@ -7,5 +7,5 @@ Comment[es]=Cliente del Tenes Empanadas Graciela
 Comment[pl]=Klient Tenes Emapandas Graciela
 Exec=tegclient
 Icon=teg_icono.png
-Terminal=0
+Terminal=false
 Type=Application
