@@ -15,8 +15,6 @@ BuildRequires:	libxml-devel
 BuildRequires:	readline-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Tenes Emapandas Graciela (TEG) is a clone of 'Plan Táctico y
