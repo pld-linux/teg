@@ -1,0 +1,20 @@
+--- teg-0.11.0/client/gui-gnome/teg.desktop.orig	2002-05-11 20:58:57.000000000 +0200
++++ teg-0.11.0/client/gui-gnome/teg.desktop	2004-04-08 20:37:56.074717944 +0200
+@@ -1,11 +1,16 @@
+ [Desktop Entry]
++Encoding=UTF-8
+ Name=T.E.G. client
+ Name[es]=Cliente T.E.G.
+ Name[de]=T.E.G. Client
++Name[pl]=Klient T.E.G.
+ Comment=Tenes Empanadas Graciela client
+ Comment[es]=Cliente del Tenes Empanadas Graciela
+ Comment[de]=Client für Tenes Empanadas Graciela
++Comment[pl]=Klient Tenes Emapandas Graciela
+ Exec=tegclient
+ Icon=teg_icono.png
+-Terminal=0
++Terminal=false
+ Type=Application
++Categories=Game;StrategyGame;
++# vi: encoding=utf-8
