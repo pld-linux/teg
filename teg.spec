@@ -15,7 +15,7 @@ BuildRequires:	libgnome-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.0.0
 BuildRequires:	libxml2-devel >= 2.4.0
 BuildRequires:	readline-devel
-Requires(post):	Gconf2
+Requires(post):	GConf2
 Requires:	glib2 >= 2.0.0
 Requires:	libgnome >= 2.0.0
 Requires:	libgnomeui >= 2.0.0
