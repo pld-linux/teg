@@ -2,13 +2,14 @@ Summary:	Risk clone
 Summary(pl):	Klon Ryzyka
 Name:		teg
 Version:	0.11.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/teg/%{name}-%{version}.tar.bz2
 # Source0-md5:	b7c778b07a22c34bd21942a8be26e095
-Source1:	%{name}.desktop
+Patch0:		%{name}-desktop.patch
 URL:		http://teg.sf.net/
+BuildRequires:	automake
 BuildRequires:	glib2-devel >= 2.0.0
 BuildRequires:	libgnome-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.0.0
@@ -33,8 +34,10 @@ turowej dla wielu graczy. Niektóre zasady s± inne.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+cp -f /usr/share/automake/config.* .
 %configure \
 	--with-readline \
 	--without-static
@@ -43,12 +46,11 @@ turowej dla wielu graczy. Niektóre zasady s± inne.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Games
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
-
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+	DESTDIR=$RPM_BUILD_ROOT \
+	GCONFTOOL=/bin/true \
+	Gamesdir=%{_desktopdir}
 
 %find_lang %{name} --with-gnome
 
@@ -64,5 +66,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_pixmapsdir}/teg_icono.png
 %{_pixmapsdir}/teg_pix
-%{_applnkdir}/Games/*
+%{_desktopdir}/*.desktop
 %{_sysconfdir}/gconf/schemas/*.schemas
