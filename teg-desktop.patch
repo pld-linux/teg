@@ -16,5 +16,5 @@
 -Terminal=0
 +Terminal=false
  Type=Application
-+Categories=Game;StrategyGame;
++Categories=GTK;GNOME;Game;StrategyGame;
 +# vi: encoding=utf-8
