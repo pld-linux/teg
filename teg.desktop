@@ -10,3 +10,4 @@ Exec=tegclient
 Icon=teg_icono.png
 Terminal=false
 Type=Application
+# vi: encoding=utf-8
