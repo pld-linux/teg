@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/teg/%{name}-%{version}.tar.gz
+# Source0-md5:	c9ba8ab27bc590b8fe48a37fafd69e8b
 Source1:	%{name}.desktop
 URL:		http://teg.sf.net/
 BuildRequires:	autoconf
