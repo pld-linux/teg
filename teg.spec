@@ -8,6 +8,7 @@ Group:		X11/Applications/Games
 Source0:	http://prdownloads.sourceforge.net/teg/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 URL:		http://teg.sf.net
+BuildRequires:	autoconf
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libxml-devel
 BuildRequires:	readline-devel
@@ -30,7 +31,9 @@ turowej dla wielu graczy. Niektóre zasady s± inne.
 %setup -q
 
 %build
-%{configure2_13} \
+cd ggz; autoconf; cd ..
+autoconf
+%configure \
 	--with-readline \
 	--without-static
 
