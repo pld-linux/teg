@@ -9,7 +9,6 @@ Source0:	http://dl.sourceforge.net/teg/%{name}-%{version}.tar.gz
 # Source0-md5:	c9ba8ab27bc590b8fe48a37fafd69e8b
 Source1:	%{name}.desktop
 URL:		http://teg.sf.net/
-BuildRequires:	autoconf
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libxml-devel
 BuildRequires:	readline-devel
@@ -29,11 +28,7 @@ turowej dla wielu graczy. Niektóre zasady s± inne.
 %setup -q
 
 %build
-cd ggz
-%{__autoconf}
-cd ..
-%{__autoconf}
-%configure \
+%configure2_13 \
 	--with-readline \
 	--without-static
 
@@ -43,11 +38,12 @@ cd ..
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_applnkdir}/Games
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 
-%find_lang %{name}
+%find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,7 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog PEOPLE README.GGZ TODO README
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/gnome/help/teg
 %{_pixmapsdir}/teg_icono.png
 %{_pixmapsdir}/teg_pix
 %{_applnkdir}/Games/*
