@@ -5,8 +5,7 @@ Version:	0.10.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-#Source0:	http://prdownloads.sourceforge.net/teg/%{name}-%{version}.tar.gz
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/teg/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 URL:		http://teg.sf.net/
 BuildRequires:	autoconf
@@ -14,7 +13,6 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	libxml-devel
 BuildRequires:	readline-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Tenes Emapandas Graciela (TEG) is a clone of 'Plan Táctico y
@@ -30,7 +28,9 @@ turowej dla wielu graczy. Niektóre zasady s± inne.
 %setup -q
 
 %build
-(cd ggz; autoconf)
+cd ggz
+%{__autoconf}
+cd ..
 %{__autoconf}
 %configure \
 	--with-readline \
@@ -46,7 +46,7 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/Games
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 
-%{find_lang} %{name}
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
