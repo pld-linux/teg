@@ -32,7 +32,7 @@ turowej dla wielu graczy. Niektóre zasady s± inne.
 
 %build
 (cd ggz; autoconf)
-autoconf
+%{__autoconf}
 %configure \
 	--with-readline \
 	--without-static
