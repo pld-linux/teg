@@ -1,5 +1,5 @@
-Summary:	Risk clone.
-Summary(pl):	Klon Riska.
+Summary:	Risk clone
+Summary(pl):	Klon Riska
 Name:		teg
 Version:	0.9.2
 Release:	1
@@ -7,7 +7,7 @@ License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://prdownloads.sourceforge.net/teg/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
-URL:		http://teg.sf.net
+URL:		http://teg.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libxml-devel
@@ -31,7 +31,7 @@ turowej dla wielu graczy. Niektóre zasady s± inne.
 %setup -q
 
 %build
-cd ggz; autoconf; cd ..
+(cd ggz; autoconf)
 autoconf
 %configure \
 	--with-readline \
