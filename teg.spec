@@ -1,5 +1,5 @@
 Summary:	Risk clone
-Summary(pl):	Klon Riska
+Summary(pl):	Klon Ryzyka
 Name:		teg
 Version:	0.9.2
 Release:	1
@@ -24,7 +24,7 @@ multiplayer turn-based strategy game. Some rules are different.
 
 %description -l pl
 Tenes Emapandas Graciela (TEG) jest klonem 'Plan Táctico y Estratégico
-de la Guerra', który jest pseudo-klonem Riska, strategicznej gry
+de la Guerra', który jest pseudo-klonem Ryzyka, strategicznej gry
 turowej dla wielu graczy. Niektóre zasady s± inne.
 
 %prep
