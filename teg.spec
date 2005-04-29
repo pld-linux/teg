@@ -2,7 +2,7 @@ Summary:	Risk clone
 Summary(pl):	Klon Ryzyka
 Name:		teg
 Version:	0.11.0
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/teg/%{name}-%{version}.tar.bz2
@@ -15,7 +15,8 @@ BuildRequires:	libgnome-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.0.0
 BuildRequires:	libxml2-devel >= 2.4.0
 BuildRequires:	readline-devel
-Requires(post):	GConf2
+BuildRequires:	rpmbuild(macros) >= 1.197
+Requires(post,preun):	GConf2
 Requires:	glib2 >= 2.0.0
 Requires:	libgnome >= 2.0.0
 Requires:	libgnomeui >= 2.0.0
@@ -41,7 +42,6 @@ cp -f /usr/share/automake/config.* .
 %configure \
 	--with-readline \
 	--without-static
-
 %{__make}
 
 %install
@@ -58,7 +58,10 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%gconf_schema_install
+%gconf_schema_install teg.schemas
+
+%preun
+%gconf_schema_uninstall teg.schemas
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
