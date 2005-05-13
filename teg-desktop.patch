@@ -9,7 +9,8 @@
 +Name[pl]=Klient T.E.G.
  Comment=Tenes Empanadas Graciela client
  Comment[es]=Cliente del Tenes Empanadas Graciela
- Comment[de]=Client für Tenes Empanadas Graciela
+-Comment[de]=Client für Tenes Empanadas Graciela
++Comment[de]=Client fÃ¼r Tenes Empanadas Graciela
 +Comment[pl]=Klient Tenes Emapandas Graciela
  Exec=tegclient
  Icon=teg_icono.png
