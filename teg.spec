@@ -8,7 +8,7 @@ Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/teg/%{name}-%{version}.tar.bz2
 # Source0-md5:	b7c778b07a22c34bd21942a8be26e095
 Patch0:		%{name}-desktop.patch
-URL:		http://teg.sf.net/
+URL:		http://teg.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 2.0.0
 BuildRequires:	libgnome-devel >= 2.0.0
