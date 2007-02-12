@@ -1,5 +1,5 @@
 Summary:	Risk clone
-Summary(pl.UTF-8):   Klon Ryzyka
+Summary(pl.UTF-8):	Klon Ryzyka
 Name:		teg
 Version:	0.11.0
 Release:	6
