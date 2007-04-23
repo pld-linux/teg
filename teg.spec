@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc ChangeLog PEOPLE README.GGZ TODO README
+%doc AUTHORS ChangeLog PEOPLE README README.GGZ TODO
 %attr(755,root,root) %{_bindir}/*
 %{_pixmapsdir}/teg_icono.png
 %{_pixmapsdir}/teg_pix
