@@ -2,7 +2,7 @@ Summary:	Risk clone
 Summary(pl.UTF-8):	Klon Ryzyka
 Name:		teg
 Version:	0.11.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/teg/%{name}-%{version}.tar.bz2
@@ -52,6 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 	GCONFTOOL=/bin/true \
 	Gamesdir=%{_desktopdir}
 
+mv $RPM_BUILD_ROOT%{_datadir}/locale/hu{_HU,}
+
 %find_lang %{name} --with-gnome
 
 %clean
@@ -70,4 +72,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/teg_icono.png
 %{_pixmapsdir}/teg_pix
 %{_desktopdir}/*.desktop
-%{_sysconfdir}/gconf/schemas/*.schemas
+%{_sysconfdir}/gconf/schemas/teg.schemas
