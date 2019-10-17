@@ -2,7 +2,7 @@ Summary:	Risk clone
 Summary(pl.UTF-8):	Klon Ryzyka
 Name:		teg
 Version:	0.11.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/teg/%{name}-%{version}.tar.bz2
