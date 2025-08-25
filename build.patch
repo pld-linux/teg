@@ -1,0 +1,22 @@
+--- teg-0.11.2/server/main.c~	2004-08-04 15:03:07.000000000 +0200
++++ teg-0.11.2/server/main.c	2025-08-25 20:03:55.632664295 +0200
+@@ -194,7 +194,7 @@ void main_loop( void )
+ {
+ 	int listenfd,fd, nready;
+ 	struct sockaddr client;
+-	ssize_t client_len;
++	socklen_t client_len;
+ 	fd_set read_set;
+ 	struct timeval timeout, timeofday_old, timeofday_new;
+ 	struct timezone tz;
+--- teg-0.11.2/client/gui-gnome/priv.c~	2002-10-14 05:26:36.000000000 +0200
++++ teg-0.11.2/client/gui-gnome/priv.c	2025-08-25 20:09:26.994623806 +0200
+@@ -30,7 +30,7 @@
+ #include "interface.h"
+ #include "priv.h"
+ 
+-struct _gui_private gui_private;
++extern struct _gui_private gui_private;
+ 
+ /* Prefs */
+ GConfClient *g_conf_client = NULL;

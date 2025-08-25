@@ -1,6 +1,7 @@
---- teg-0.11.0/client/gui-gnome/teg.desktop.orig	2002-05-11 20:58:57.000000000 +0200
-+++ teg-0.11.0/client/gui-gnome/teg.desktop	2004-04-08 20:37:56.074717944 +0200
-@@ -1,11 +1,16 @@
+diff -ur teg-0.11.2.org/client/gui-gnome/teg.desktop teg-0.11.2/client/gui-gnome/teg.desktop
+--- teg-0.11.2.org/client/gui-gnome/teg.desktop	2007-03-13 19:03:56.000000000 +0100
++++ teg-0.11.2/client/gui-gnome/teg.desktop	2025-08-25 20:01:22.345091160 +0200
+@@ -1,12 +1,17 @@
  [Desktop Entry]
 +Encoding=UTF-8
  Name=T.E.G. client
@@ -17,5 +18,6 @@
 -Terminal=0
 +Terminal=false
  Type=Application
-+Categories=GTK;GNOME;Game;StrategyGame;
+ Categories=GTK;GNOME;Game;StrategyGame;
 +# vi: encoding=utf-8
++Categories=GTK;GNOME;Game;StrategyGame;

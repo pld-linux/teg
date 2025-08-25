@@ -2,12 +2,13 @@ Summary:	Risk clone
 Summary(pl.UTF-8):	Klon Ryzyka
 Name:		teg
 Version:	0.11.2
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/teg/%{name}-%{version}.tar.bz2
 # Source0-md5:	880c18eb586c4642fe14e6b41e8a642f
 Patch0:		%{name}-desktop.patch
+Patch1:		build.patch
 URL:		http://teg.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 2.0.0
@@ -36,6 +37,7 @@ turowej dla wielu graczy. Niektóre zasady są inne.
 %prep
 %setup -q
 %patch -P0 -p1
+%patch -P1 -p1
 
 %build
 cp -f /usr/share/automake/config.* .
